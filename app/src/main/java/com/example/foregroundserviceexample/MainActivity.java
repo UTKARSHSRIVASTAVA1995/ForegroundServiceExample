@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editTextinput;
+    private EditText etInput;
 
 
     @Override
@@ -17,11 +17,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editTextinput = findViewById(R.id.edit_text_input);
+        etInput = findViewById(R.id.edit_text_input);
 
     }
     public void startService(View v){
-        String input = editTextinput.getText().toString();
+        String input = etInput.getText().toString();
         Intent serviceIntent = new Intent(this,ExampleService.class);
         serviceIntent.putExtra("inputextra",input);
 
